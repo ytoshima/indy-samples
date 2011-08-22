@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="ex" default="compile" basedir=".">
+  <property name="src" value="."/>
+  <property name="build" value="."/>
+  <property name="main-class" value="DropEx"/>
+  <path id="master-classpath">        <!--
+        <fileset dir="${jfreechart.home}/lib">
+            <include name="*.jar"/>
+        </fileset>  -->
+        <!-- We need the servlet API classes: -->
+        <!--  * for Tomcat 5/6 use servlet-api.jar -->
+        <!--  * for other app servers - check the docs -->
+  </path>
+
+  <target name="compile">
+    <javac srcdir="${src}" destdir="${build}" debug="true" debuglevel="lines,vars,source">
+    </javac>
+  </target>
+    <target name="run" depends="compile">      
+      <java classname="${main-class}" fork="true">
+        <classpath refid="master-classpath"/>
+        <classpath location="."/>
+      </java>
+    </target>
+
+</project>
+

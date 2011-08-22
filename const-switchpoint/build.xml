@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="indy-inline-icache" default="compile">
+  <property name="src" location="src" />
+  <property name="classes" location="classes" />
+  <property name="asm.jar" value="asm-4.0_RC1.jar" />
+  <!-- property name="asm.jar" value="asm-4.0.jar" / -->
+  <property name="lib-asm.jar" location="lib/${asm.jar}" />
+
+  <path id="class.path">
+    <pathelement path="${lib-asm.jar}"/>
+  </path>
+  
+  <target name="compile">
+        <mkdir dir="${classes}"/>
+    <javac srcdir="${src}" destdir="${classes}" source="1.7" target="1.7" classpath="${lib-asm.jar}" debug="on" />
+  </target>
+
+  <target name="run" depends="compile">
+    <java classname="name/yt/switchpoint/SwitchPointEx" fork="yes">
+      <classpath>
+        <path refid="class.path"/>
+        <pathelement path="${classes}"/>
+      </classpath>
+    </java>
+  </target>
+
+  <target name="clean">
+    <delete dir="${classes}" />
+  </target>
+
+</project>
