@@ -40,53 +40,6 @@ invokedynamic と guardWithTest を使用した inline cache の例
 
 10. target を呼び出し、リターン。
 
-7. fallback MethodHandle を生成、CallSite を bind しておく。
-
-8. MethodHandles.guardWithTest で test, target, fallback を合成。
-
-9. CallSite の target を更新
-
-10. target を呼び出し、リターン。
-
-7. fallback MethodHandle を生成、CallSite を bind しておく。
-
-8. MethodHandles.guardWithTest で test, target, fallback を合成。
-
-9. CallSite の target を更新
-
-10. target を呼び出し、リターン。
-
-7. fallback MethodHandle を生成、CallSite を bind しておく。
-
-8. MethodHandles.guardWithTest で test, target, fallback を合成。
-
-9. CallSite の target を更新
-
-10. target を呼び出し、リターン。
-
-7. fallback MethodHandle を生成、CallSite を bind しておく。
-
-8. MethodHandles.guardWithTest で test, target, fallback を合成。
-
-9. CallSite の target を更新
-
-10. target を呼び出し、リターン。
-
-7. fallback MethodHandle を生成、CallSite を bind しておく。
-
-8. MethodHandles.guardWithTest で test, target, fallback を合成。
-
-9. CallSite の target を更新
-
-10. target を呼び出し、リターン。
-
-7. fallback MethodHandle を生成、CallSite を bind しておく。
-
-8. MethodHandles.guardWithTest で test, target, fallback を合成。
-
-9. CallSite の target を更新
-
-10. target を呼び出し、リターン。
 
 指定している receiver の型が変わったときのみ fallback が呼び出され、
 target が再設定されている事が分かる。target にキャッシュされた
