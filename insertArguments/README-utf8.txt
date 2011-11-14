@@ -20,7 +20,7 @@ MethodHandles.insertArguments(mh_replace, 0, "daddy") も同様の結果にな�
 insertArguments の結果、引数が関連づけられるので、返ってくる MethodHandle の 
 type からは引数の数が減っている。
 
-概念的には関数型言語の部分適用、currying と似ている。
+概念的には関数型言語の部分適用 と似ている。
 
 MethodHandle 生成時に覚えさせておきたい引数を覚えさせておく事ができる。
 MutableCallSite/VolatileCallSite を fallback に覚えさせておけば、
